@@ -11,36 +11,50 @@ body{
 }
 #header{
     width: 100%;
-    height: 100vh;
-    background-image: url(immagini/profile2.jpg);
-    background-size: auto;
+    min-height: 100vh;
+    background-size:auto;
     background-position: center;
 }
 .container{
-    padding: 10px 10%;
+    padding: 4px 5%;
+    
 }
-
+.logo{
+    width: 240px;
+    margin-left: 20px;
+    margin-top: 30px;
+    padding: 10px 0%;
+}
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    
 }
-#logo{
-    width: 220px;
-}
-nav ul li{
+.navItems li{
     display: inline-block;
     list-style: none;
+    position: relative;
     margin: 10px 20px;
+    
 }
-nav ul li a{
+.navItems li a{
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     position: relative;
+    letter-spacing: 2px;
+
 }
-nav ul li a::after{
+
+.navItems li:hover a,
+.links a:hover{
+    color: #a43b7b;
+    transition: 0.8s;
+}
+/* line under Hover effect
+.navItems li a::after{
     content: '';
     width: 0%;
     height: 3px;
@@ -50,7 +64,111 @@ nav ul li a::after{
     bottom: -6px;
     transition: 0.5s;
 }
-nav ul li a:hover::after{
+.navItems li a:hover::after{
     width: 100%;
+}
+*/
 
+.header-text {
+    /*bisogna renderlo 
+    responsive a seconda della dim schermo*/
+    position: absolute;
+    margin-top: 6%;
+    font-size: 25px;
+    margin-left: 8%;
+    width: 90%;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+} 
+
+.header-text p{
+    margin: 10px 0 40px;
+}
+
+.header-text p,
+.header-text h1 span{
+    color: #fff;
+}
+.header-text p:hover,
+.header-text h1 span:hover{
+    color: #a43b7b;
+    transition: 0.3s;
+}
+
+.hero-btn{
+    position: relative;
+    top:20px;
+    font-size: medium;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 30px;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 25px;
+}
+.hero-btn:hover{
+    border: 1px solid #a43b7b;
+    background: #a43b7b;
+}
+.header-text img{
+    /*bisogna renderlo 
+    responsive a seconda della dim schermo*/
+    width:35%;
+    flex-basis: 35%;
+    margin-left: 50%;
+    margin-right: 140px;
+    position:relative;
+    top: -300px;
+    animation: animateUser 4s linear infinite;
+}
+@keyframes animateUser{
+    50%{
+       top: -290px;
+    }
+}
+
+
+/*------------About-----------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1,
+.about-col-2{
+    flex-basis: 35%;
+}
+.about-col-2 img{
+    width:90%;
+    border-radius: 15px;
+    
+}
+.about-col-1{
+    margin-left: 8%;
+}
+.about-col-1 img{
+    width: 80%;
+    margin-left: 13%;
+}
+.col1-text p{
+    color: #fff;
+}
+.col1-text h1{
+    color: #a43b7b;
+}
+.col1-text p,
+.col1-text h1{
+    margin-top: 15px;
+    text-align: center;
 }
