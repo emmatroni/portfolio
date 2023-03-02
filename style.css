@@ -119,7 +119,7 @@ nav{
 .header-text img{
     /*bisogna renderlo 
     responsive a seconda della dim schermo*/
-    width:35%;
+    width:33%;
     flex-basis: 35%;
     margin-left: 50%;
     margin-right: 140px;
@@ -145,30 +145,72 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.about-col-1,
-.about-col-2{
+.about-col-1 {
+    flex-basis: 50%;
+}
+.about-col-2 {
     flex-basis: 35%;
 }
 .about-col-2 img{
     width:90%;
     border-radius: 15px;
-    
 }
 .about-col-1{
     margin-left: 8%;
 }
 .about-col-1 img{
-    width: 80%;
-    margin-left: 13%;
+    width: 60%;
+    align-items: center;
+    margin: 0 13% 15px;
 }
-.col1-text p{
-    color: #fff;
-}
-.col1-text h1{
+
+.sub-title{
     color: #a43b7b;
 }
-.col1-text p,
-.col1-text h1{
+.col1-text{
     margin-top: 15px;
-    text-align: center;
+    display: flex;
+    margin-left: -40px;
+    
+}
+.tab-titles{
+    display: flex;
+    /*top left bottom*/
+    margin: 20px -40px 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #a43b7b;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px -40px;
+}
+
+.tab-contents ul li span{
+    color: #7b3460;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
 }
