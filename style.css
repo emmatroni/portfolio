@@ -212,3 +212,78 @@ nav{
     grid-gap:40px;
     margin-top: 50px;
 }
+/*------------ css for medium screens -------------*/
+@media only screen and (max-width:850px){
+    .logo{
+        width: 170px;
+        margin-left: 0px;
+    }
+    .navItems li{
+        
+        margin: 10px 15px;
+    }
+    .navItems li a{
+        font-size: 20px;
+        position: relative;
+        letter-spacing: 0px;
+    
+    }
+    .index-col-1{
+        margin: 0% 0px;
+        font-size: 23px; 
+    }
+    .index-col-1 h1 {
+        font-size: 50px;
+        margin-top: 20px;
+    }
+    .hero-btn{
+        font-size: 20px;
+    }
+    .index-col-2{
+        width: 40%;
+        margin-right: 20px;
+
+    }
+    .index-col-2 img {
+        width: 135%;
+        cursor: pointer;
+        margin: 0px 0px;
+        position: right;
+    }
+
+}
+
+/*------------ css for small screens -------------*/
+@media only screen and (max-width:600px){
+    #main{
+        padding: 30px 0;
+    }
+    .index-col-1{
+        
+        margin: 0% 0px;
+        font-size: small; /*16px*/
+
+    }
+    .index-col-1 h1 {
+        font-size: 25px;
+        margin-top: 5px;
+    }
+    .hero-btn{
+        font-size: 11px;
+        top:5px;
+        padding: 4px 15px;
+    }
+    .index-col-2{
+        width: 40%;
+        margin-right: 0px;
+
+    }
+    .index-col-2 img {
+        width: 125%;
+        cursor: pointer;
+        margin: 0px 0px;
+        position: right;
+
+    }
+
+}
