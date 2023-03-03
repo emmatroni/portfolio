@@ -126,8 +126,6 @@ nav{
 
 
 /*------------About-----------*/
-
-
 .row{
     display: flex;
     justify-content: space-between;
@@ -250,11 +248,12 @@ nav{
         width: 135%;
         cursor: pointer;
         margin: 0px 0px;
-        position: right;
     }
-
 }
 
+nav .fa-solid{
+    display: none;
+}
 /*------------ css for small screens -------------*/
 @media only screen and (max-width:600px){
     #main{
@@ -263,6 +262,7 @@ nav{
     .logo{
         width: 100px;
     }
+    /*
     .navItems li{
         margin: 5px 5px;
     }
@@ -270,8 +270,34 @@ nav{
         font-size: 15px;
         position: relative;
         letter-spacing: 0px;
-    
     }
+    */
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    .navItems{
+        background: #8e306a;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    .navItems li{
+        display: block;
+        margin: 25px;
+    }
+    .navItems .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
     .row{
         display: contents;
     }
@@ -296,5 +322,6 @@ nav{
     .index-col-2 img {
         margin: 0px 0px;
     }
+    
 
 }
