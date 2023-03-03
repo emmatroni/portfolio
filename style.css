@@ -69,31 +69,32 @@ nav{
 }
 */
 
-.header-text {
+#main{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.index-col-1 {
     /*bisogna renderlo 
     responsive a seconda della dim schermo*/
-    position: absolute;
-    margin-top: 6%;
+    margin-left: 15px;
     font-size: 25px;
-    margin-left: 8%;
     width: 90%;
+    position: relative;
 }
 
-.header-text h1{
-    font-size: 60px;
-    margin-top: 20px;
+.index-col-1 h1{
+    flex-basis: 50%;
+    position: relative;
+    font-size: 55px;
 } 
 
-.header-text p{
-    margin: 10px 0 40px;
-}
-
-.header-text p,
-.header-text h1 span{
+.index-col-1 p,
+.index-col-1 h1 span{
     color: #fff;
 }
-.header-text p:hover,
-.header-text h1 span:hover{
+.index-col-1 p:hover,
+.index-col-1 h1 span:hover{
     color: #a43b7b;
     transition: 0.3s;
 }
@@ -116,34 +117,20 @@ nav{
     border: 1px solid #a43b7b;
     background: #a43b7b;
 }
-.header-text img{
-    /*bisogna renderlo 
-    responsive a seconda della dim schermo*/
-    width:33%;
-    flex-basis: 35%;
-    margin-left: 50%;
-    margin-right: 140px;
-    position:relative;
-    top: -340px;
-    animation: animateUser 4s linear infinite;
+.index-col-2 img{
+    width: 80%;
+    margin:-15% 50px;
+    cursor: pointer;
 }
-@keyframes animateUser{
-    50%{
-       top: -310px;
-    }
-}
+
 
 
 /*------------About-----------*/
-#about{
-    padding: 80px 0;
-    color: #ababab;
-}
+
 
 .row{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 .about-col-1 {
     flex-basis: 50%;
@@ -213,4 +200,15 @@ nav{
 }
 .tab-contents.active-tab{
     display: block;
+}
+
+/*------------Services-----------*/
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 50px;
 }

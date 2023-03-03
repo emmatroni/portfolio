@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
+
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <a href="/index.html"><img src="immagini/Firma.svg"  class="logo"> </a>
+                <a href="/index.html"><img src="immagini/Firma.svg" class="logo"> </a>
                 <ul class="navItems">
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/about.html">About</a></li>
@@ -21,69 +23,74 @@
                     <li><a href="/contact.html">Contact</a></li>
                 </ul>
             </nav>
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="immagini/about.svg">
-                <div class="col1-text">
-                <!---<h1 class="sub-title">Lorem ipsum </h1>-->
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Id laudantium assumenda explicabo at libero officiis ullam 
-                    in molestiae consequatur sunt placeat perferendis quam beatae, 
-                    consequuntur porro obcaecati aliquam minima est!</p>
-                </div>
+            <div id="main">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="immagini/about.svg">
+                            <div class="col1-text">
+                                <!---<h1 class="sub-title">Lorem ipsum </h1>-->
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Id laudantium assumenda explicabo at libero officiis ullam
+                                    in molestiae consequatur sunt placeat perferendis quam beatae,
+                                    consequuntur porro obcaecati aliquam minima est!</p>
+                            </div>
 
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>UI/UX</span><br>Designing Web interfaces</li>
-                        <li><span>Buisness Cards</span><br>Lorem ipsum dolor sit amet</li>
-                        <li><span>Photos</span><br>in molestiae consequatur sunt placeat </li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>2022 - Current</span><br>porro obcaecati aliquam minima est!</li>
-                        <li><span>2020 - 2021</span><br>in molestiae consequatur sunt placeat </li>
-                        <li><span>2018 - 2019</span><br> consectetur adipisicing elit</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>Current</span><br> assumenda explicabo at libero officiis ulla</li>
-                        <li><span>2018</span><br>sunt placeat perferendis quam beatae</li>
-                        <li><span>2016</span><br>Lorem ipsum dolor sit amet</li>
-                    </ul>
-                </div>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>UI/UX</span><br>Designing Web interfaces</li>
+                                    <li><span>Buisness Cards</span><br>Lorem ipsum dolor sit amet</li>
+                                    <li><span>Photos</span><br>in molestiae consequatur sunt placeat </li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>2022 - Current</span><br>porro obcaecati aliquam minima est!</li>
+                                    <li><span>2020 - 2021</span><br>in molestiae consequatur sunt placeat </li>
+                                    <li><span>2018 - 2019</span><br> consectetur adipisicing elit</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>Current</span><br> assumenda explicabo at libero officiis ulla</li>
+                                    <li><span>2018</span><br>sunt placeat perferendis quam beatae</li>
+                                    <li><span>2016</span><br>Lorem ipsum dolor sit amet</li>
+                                </ul>
+                            </div>
 
+                        </div>
+
+                        <div class="about-col-2">
+                            <img src="immagini/user.jpg">
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="about-col-2">
-                <img src="immagini/user.jpg">
 
-            </div>
+            <!-- javascript--->
+            <script>
+                var tablinks = document.getElementsByClassName('tab-links');
+                var tabcontents = document.getElementsByClassName('tab-contents');
 
-        </div>
-    </div>
-</div>
-<!-- javascript--->
-<script>
-    var tablinks = document.getElementsByClassName('tab-links');
-    var tabcontents = document.getElementsByClassName('tab-contents');
+                function opentab(tabname) {
+                    for (tablink of tablinks) {
+                        tablink.classList.remove('active-link');
+                    }
+                    for (tabcontent of tabcontents) {
+                        tabcontent.classList.remove('active-tab');
+                    }
+                    event.currentTarget.classList.add('active-link');
+                    document.getElementById(tabname).classList.add('active-tab');
+                }
 
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove('active-link');
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove('active-tab');
-        }
-    }
-
-</script>
+            </script>
 </body>
+
 </html>
