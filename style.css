@@ -256,16 +256,29 @@ nav{
 /*------------ css for small screens -------------*/
 @media only screen and (max-width:600px){
     #main{
-        padding: 30px 0;
+        padding: 30px 0 ;
+    }
+    .logo{
+        width: 100px;
+    }
+    .navItems li{
+        margin: 5px 5px;
+    }
+    .navItems li a{
+        font-size: 15px;
+        position: relative;
+        letter-spacing: 0px;
+    
+    }
+    .row{
+        display: contents;
     }
     .index-col-1{
-        
-        margin: 0% 0px;
+        margin: 0% 0px 70px;
         font-size: small; /*16px*/
-
     }
     .index-col-1 h1 {
-        font-size: 25px;
+        font-size: 30px;
         margin-top: 5px;
     }
     .hero-btn{
@@ -274,16 +287,12 @@ nav{
         padding: 4px 15px;
     }
     .index-col-2{
-        width: 40%;
+        width: 70%;
         margin-right: 0px;
 
     }
     .index-col-2 img {
-        width: 125%;
-        cursor: pointer;
         margin: 0px 0px;
-        position: right;
-
     }
 
 }
