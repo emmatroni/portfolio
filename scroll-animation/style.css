@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;1,100&display=swap');
+body{
+    background-color: #131316;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+section{
+    /*IMP: center all the content inside each section */
+    display: grid;
+    place-items: center;
+    /*if multiple idem in section*/
+    align-content: center;
+    min-height: 100vh;
+}
+/* css transition for the actual animation */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+/*
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    } 
+}
+*/
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+}
+/*avatar animation delay*/
+.logos {
+    display:flex;
+}
+.logos img{
+    width: 80%;
+}
+.logo:nth-child(2) {
+    transition-delay: 200ms;
+}
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+}
+.logo:nth-child(4) {
+    transition-delay: 600ms;
+}
+
