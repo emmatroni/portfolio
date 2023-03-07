@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,50 +9,67 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
+
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <a href="/index.html"><img src="immagini/Firma.svg"  class="logo"> </a>
-                <ul class="navItems">
+                <a href="/index.html"><img src="immagini/Firma.svg" class="logo"> </a>
+                <ul class="navItems" id="sidemenu">
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/about.html">About</a></li>
                     <li><a href="/projects.html">Projects</a></li>
                     <li><a href="/photos.html">Photos</a></li>
                     <li><a href="/contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
 
-<!-- serrvices--->
-<div id="projects">
-    <div class="container">
-        <h1 class="sub-title">My Projects</h1>
-        <div class="projects-list">
-            <div>
-                <h2>Web Design</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur libero velit repudiandae earum, modi animi? Error sit quidem nobis? Provident assumenda optio voluptatibus laborum eaque repudiandae placeat totam distinctio! Praesentium!</p>
-                <a href="#">Learn more</a>
+            <!-- serrvices--->
+            <div id="projects">
+                <div class="container">
+                    <h1 class="sub-title">My Projects</h1>
+                    <div class="projects-list">
+                        <div>
+                            <h2>Web Design</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur libero velit
+                                repudiandae earum, modi animi? Error sit quidem nobis? Provident assumenda optio
+                                voluptatibus laborum eaque repudiandae placeat totam distinctio! Praesentium!</p>
+                            <a href="#">Learn more</a>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+        
+        <!-- javascript-: sidemenu-->
+        <script>
+            var sidemen = document.getElementById('sidemenu');
 
-        </div>
-    </div>
-</div>
-<!-- javascript--->
-<script>
-    var tablinks = document.getElementsByClassName('tab-links');
-    var tabcontents = document.getElementsByClassName('tab-contents');
+            function openmenu(){
+                sidemen.style.right = '0';
+            }
+            function closemenu(){
+                sidemen.style.right = '-200px';
+            }
+        </script>
+            <!-- javascript--->
+            <script>
+                var tablinks = document.getElementsByClassName('tab-links');
+                var tabcontents = document.getElementsByClassName('tab-contents');
 
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove('active-link');
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove('active-tab');
-        }
-        event.currentTarget.classList.add('active-link');
-        document.getElementById(tabname).classList.add('active-tab');
-    }
-
-</script>
+                function opentab(tabname) {
+                    for (tablink of tablinks) {
+                        tablink.classList.remove('active-link');
+                    }
+                    for (tabcontent of tabcontents) {
+                        tabcontent.classList.remove('active-tab');
+                    }
+                    event.currentTarget.classList.add('active-link');
+                    document.getElementById(tabname).classList.add('active-tab');
+                }
+            </script>
+            
 </body>
 </html>
