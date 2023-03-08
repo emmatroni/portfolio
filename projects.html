@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Emma Troni</title>
+    <title>Projects - Emma Troni</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
@@ -26,34 +26,37 @@
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
 
-            <!-- serrvices--->
+            <!-- projects--->
             <div id="projects">
                 <div class="container">
-                    <h1 class="sub-title">My Projects</h1>
+                    <section>
+                        <h1 class="sub-title">My Projects</h1>
+                    </section>
                     <div class="projects-list">
-                        <div>
+                        <div class="project-1">
                             <h2>Web Design</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur libero velit
-                                repudiandae earum, modi animi? Error sit quidem nobis? Provident assumenda optio
-                                voluptatibus laborum eaque repudiandae placeat totam distinctio! Praesentium!</p>
-                            <a href="#">Learn more</a>
+                            <section class="hidden">
+                                <p>Lorem ipsum amet consectetur adipisicing elit. Consequuntur libero velit
+                                    repudiandae laborum eaque repudiandae placeat totam distinctio! Praesentium!</p>
+                                <a href="#">Learn more</a>
+                            </section>                     
                         </div>
 
                     </div>
                 </div>
             </div>
-        
-        <!-- javascript-: sidemenu-->
-        <script>
-            var sidemen = document.getElementById('sidemenu');
 
-            function openmenu(){
-                sidemen.style.right = '0';
-            }
-            function closemenu(){
-                sidemen.style.right = '-200px';
-            }
-        </script>
+            <!-- javascript-: sidemenu-->
+            <script>
+                var sidemen = document.getElementById('sidemenu');
+
+                function openmenu() {
+                    sidemen.style.right = '0';
+                }
+                function closemenu() {
+                    sidemen.style.right = '-200px';
+                }
+            </script>
             <!-- javascript--->
             <script>
                 var tablinks = document.getElementsByClassName('tab-links');
@@ -70,6 +73,25 @@
                     document.getElementById(tabname).classList.add('active-tab');
                 }
             </script>
-            
+            <!--scroll animation-->
+            <script>
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        console.log(entry)
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show');
+
+                        } else {
+                            entry.target.classList.remove('show');
+                        }
+                    });
+                });
+                //  grab all the element of the class
+                const hiddenElements = document.querySelectorAll('.hidden');
+
+                //  what should observe: in this demo it observes all hidden elements
+                hiddenElements.forEach((el) => observer.observe(el));
+            </script>
 </body>
+
 </html>

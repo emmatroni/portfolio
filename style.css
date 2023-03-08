@@ -17,7 +17,6 @@ body{
 }
 .container{
     padding: 4px 5%;
-    
 }
 .logo{
     width: 240px;
@@ -72,20 +71,18 @@ nav{
 #main{
     padding: 80px 0;
     color: #ababab;
+    display: grid;
+    place-items: center;
 }
 
 .index-col-1 {
     /*bisogna renderlo 
     responsive a seconda della dim schermo*/
-    margin-left: 15px;
     font-size: 25px;
-    width: 90%;
-    position: relative;
+    width: 65%;
 }
 
 .index-col-1 h1{
-    flex-basis: 50%;
-    position: relative;
     font-size: 55px;
 } 
 
@@ -201,38 +198,79 @@ nav{
 }
 
 /*------------Projects-----------*/
-#projects{
-    padding: 30px 0;
+
+section{
+    /*IMP: center all the content inside each section */
+    display: grid;
+    place-items: center;
+    /*if multiple idem in section*/
+    align-content: center;
+    min-height: 80vh;
+}
+.sub-title{
+    font-size: 40px;
 }
 .projects-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     grid-gap:40px;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
+.project-1{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(immagini/web-design.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    min-height: 90vh;
+}
+.project-1 h2{
+    display: grid;
+    place-items: center;
+    min-height: 50vh;
+    font-size: 50px;
+}
 
+.hidden {   
+    min-height: 0vh;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 1.5s;
+}
+/*
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    } 
+}
+*/
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0%);
+}
 /*------------ css for medium screens -------------*/
-@media only screen and (max-width:850px){
+@media only screen and (max-width:915px){
     .logo{
         width: 170px;
         margin-left: 0px;
     }
     .navItems li{
-        
         margin: 10px 15px;
     }
     .navItems li a{
         font-size: 20px;
         position: relative;
         letter-spacing: 0px;
-    
     }
     .index-col-1{
         margin: 0% 0px;
         font-size: 23px; 
     }
     .index-col-1 h1 {
+        width: 110%;
         font-size: 50px;
         margin-top: 20px;
     }
@@ -241,7 +279,7 @@ nav{
     }
     .index-col-2{
         width: 40%;
-        margin-right: 20px;
+        margin-right: 40px;
 
     }
     .index-col-2 img {
@@ -304,10 +342,14 @@ nav .fa-solid{
     .index-col-1{
         margin: 0% 0px 70px;
         font-size: small; /*16px*/
+        width: 90%;
+        align-items: center;
     }
     .index-col-1 h1 {
+        width: 125%;
         font-size: 30px;
         margin-top: 5px;
+        margin-left: -2px;
     }
     .hero-btn{
         font-size: 11px;

@@ -28,8 +28,8 @@
             <div id="main">
                 <div class="container">
                     <div class="row">
-                        <div class="about-col-1">
-                            <img src="immagini/about.svg" id="about-img">
+                        <div class="about-col-1" >
+                            <img src="immagini/about.svg" id="about-img" >
                             <div class="col1-text">
                                 <!---<h1 class="sub-title">Lorem ipsum </h1>-->
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -38,26 +38,26 @@
                                     consequuntur porro obcaecati aliquam minima est!</p>
                             </div>
 
-                            <div class="tab-titles">
+                            <div class="tab-titles " >
                                 <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                                 <p class="tab-links" onclick="opentab('experience')">Experience</p>
                                 <p class="tab-links" onclick="opentab('education')">Education</p>
                             </div>
-                            <div class="tab-contents active-tab" id="skills">
+                            <div class="tab-contents active-tab " id="skills">
                                 <ul>
                                     <li><span>UI/UX</span><br>Designing Web interfaces</li>
                                     <li><span>Buisness Cards</span><br>Lorem ipsum dolor sit amet</li>
                                     <li><span>Photos</span><br>in molestiae consequatur sunt placeat </li>
                                 </ul>
                             </div>
-                            <div class="tab-contents" id="experience">
+                            <div class="tab-contents " id="experience">
                                 <ul>
                                     <li><span>2022 - Current</span><br>porro obcaecati aliquam minima est!</li>
                                     <li><span>2020 - 2021</span><br>in molestiae consequatur sunt placeat </li>
                                     <li><span>2018 - 2019</span><br> consectetur adipisicing elit</li>
                                 </ul>
                             </div>
-                            <div class="tab-contents" id="education">
+                            <div class="tab-contents " id="education">
                                 <ul>
                                     <li><span>Current</span><br> assumenda explicabo at libero officiis ulla</li>
                                     <li><span>2018</span><br>sunt placeat perferendis quam beatae</li>
@@ -68,7 +68,7 @@
                         </div>
 
                         <div class="about-col-2">
-                            <img src="immagini/user.jpg">
+                            <img src="immagini/user.jpg" >
 
                         </div>
 
@@ -80,10 +80,10 @@
             <script>
                 var sidemen = document.getElementById('sidemenu');
 
-                function openmenu(){
+                function openmenu() {
                     sidemen.style.right = '0';
                 }
-                function closemenu(){
+                function closemenu() {
                     sidemen.style.right = '-200px';
                 }
             </script>
@@ -103,8 +103,8 @@
                     event.currentTarget.classList.add('active-link');
                     document.getElementById(tabname).classList.add('active-tab');
                 }
-
             </script>
+            
 </body>
 
 </html>
