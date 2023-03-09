@@ -260,7 +260,7 @@ section{
     opacity: 0;
     filter: blur(5px);
     transform: translateY(100%);
-    transition: all 1.5s;
+    transition: all 1.3s;
 }
 /*
 @media(prefers-reduced-motion) {
@@ -403,5 +403,20 @@ nav .fa-solid{
     }
     #about-img{
         margin-bottom: 0px;
+    }
+    /**/
+    .projects-list h2{
+        font-size: 30px;
+    }
+    .projects-list p{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .project-2{
+        background-position: left;        
+    }
+    .project-1 h2,
+    .project-3 h2{
+        font-size: 35px;
     }
 }
