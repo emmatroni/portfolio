@@ -107,7 +107,7 @@ nav{
     padding: 12px 30px;
     background: transparent;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.3s;
     border-radius: 25px;
 }
 .hero-btn:hover{
