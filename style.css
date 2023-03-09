@@ -233,29 +233,26 @@ section{
     font-size: 18px;
     color: #b7b7b7;
 }
-.project-1{
+.project-1,
+.project-2,
+.project-3{
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(immagini/web-design.jpg);
+    border-radius: 15px;
     background-size: cover;
     background-position: center;
     min-height: 90vh;
 }
+.project-1{
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(immagini/web-design.jpg);
+}
 .project-2{
-    width: 100%;
     background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(immagini/graphic.jpg);
-    background-size: cover;
-    background-position: center;
-    min-height: 90vh;
     margin-top: 50px;
 }
 .project-3{
-    width: 100%;
     background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(immagini/photography.jpg);
-    background-size: cover;
-    background-position: center;
     margin-top: 50px;
     margin-bottom: 40px;
-    min-height: 90vh;
 }
 
 .hidden {   
