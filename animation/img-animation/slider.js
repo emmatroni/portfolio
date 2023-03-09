@@ -13,11 +13,15 @@ window.onmousedown = e => {
     track.dataset.prevPercentage = track.dataset.percentage;
 }
 
+window.onmouseup = () => {
+    track.dataset.mouseDownAt = "0";
+}
+
 // SECOND: mouse move listener
 // relative position from starting point + end slider
 // we devide the two of them to obtain the percentage of the slider moved
 window.onmousemove = e => {
-    if(track.dataset.mouseDownAt === 0) return;
+    if(track.dataset.mouseDownAt === "0") return;
 
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
         maxDelta = window.innerWidth /2;
