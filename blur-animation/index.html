@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="blob"></div>
+    <div id="blur"></div>
+
+    <script type="text/javascript">
+        // define blob
+        const blob = document.getElementById("blob");
+        // make it follow my pointer: give the exact coordinates
+
+        document.body.onpointermove = event => {
+            const { clientX, clientY } = event;
+
+            blob.animate({
+                left: `${clientX}px`,
+                top: `${clientY}px`
+            }, { duration: 3000, fill: "forwards" });
+        }
+
+    </script>
+</body>
+
+</html>
