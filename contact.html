@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Emma</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
 
 <body>
     <div id="header">
-        <div class="container">
+        <div class="container-contacts">
             <nav>
                 <a href="/index.html"><img src="immagini/Firma.svg" class="logo"> </a>
                 <ul class="navItems" id="sidemenu">
@@ -20,7 +21,7 @@
                     <li><a href="/about.html">About</a></li>
                     <li><a href="/projects.html">Projects</a></li>
                     <li><a href="/photos.html">Photos</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/contact.html">Contact Me</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -28,10 +29,28 @@
             <div id="main">
                 <div class="container">
                     <div class="row">
-
-
+                        <div class="contact-box">
+                            <div class="left">
+                                <a href="" download class="hero-btn">Download CV</a>
+                            </div>
+                            <div class="right">
+                                <div class="social-icons">
+                                    <a href="https://www.instagram.com/emma_troni/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                                </div>
+                                <h2>Contact Me</h2>
+                                <form name="submit-to-google-sheet">
+                                    <input type="text" name="Name" class="field" placeholder="Your Name">
+                                    <input type="text" name="Email" class="field" placeholder="Your Email">
+                                    <textarea name="Message" placeholder="Message" class="field"></textarea>
+                                    <button type="submit" class="btn">Send</button>
+                                </form>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
             <!-- javascript-: sidemenu-->
@@ -45,6 +64,17 @@
                     sidemen.style.right = '-200px';
                 }
             </script>
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwSFumJTjik_4Sfg1kJXSLBN4tKcPD9IeQzgx2U2NAXNRH2B73Z4w6GKh0_l5vzNLo/exec'
+                const form = document.forms['submit-to-google-sheet']
+              
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => console.log('Success!', response))
+                    .catch(error => console.error('Error!', error.message))
+                })
+              </script>
 
 </body>
 
