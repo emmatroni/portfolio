@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;1,100&display=swap" rel="stylesheet">
+
+
+/head>
+<body>
+    <div id="text"><div id="text">
+        <div class="line">
+          <p class="word">A</p>
+          <p class="word">Person</p>
+        </div>
+      
+        <div class="line">
+          <p class="word">YouTube</p>
+          <p class="word">&</p>
+        </div>
+      
+        <div class="line">
+          <p class="word">CodePendence</p>
+        </div>
+        
+        <div class="line">
+          <a 
+             id="insta-link" 
+             href="https://www.instagram.com/emma_troni/" 
+             target="_blank" 
+             class="word fancy"
+          >
+            @emma_troni
+          </a>
+        </div>
+      </div>
+      
+      <a id="source-link" class="meta-link" href="https://www.nathansmith.design" target="_blank">
+        <i class="fa-solid fa-link"></i>
+        <span>Source</span>
+      </a>
+      <a id="yt-link" class="meta-link" href="https://youtu.be/owpaafxvkjU" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+        <span>4 min tutorial</span>
+      </a>
+      
+<script type="text/javascript">
+  const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+const enhance = id => {
+  const element = document.getElementById(id),
+        text = element.innerText.split("");
+  
+  element.innerText = "";
+  
+  text.forEach((value, index) => {
+    const outer = document.createElement("span");
+    
+    outer.className = "outer";
+    
+    const inner = document.createElement("span");
+    
+    inner.className = "inner";
+    
+    inner.style.animationDelay = `${rand(-5000, 0)}ms`;
+    
+    const letter = document.createElement("span");
+    
+    letter.className = "letter";
+    
+    letter.innerText = value;
+    
+    letter.style.animationDelay = `${index * 1000 }ms`;
+    
+    inner.appendChild(letter);    
+    
+    outer.appendChild(inner);    
+    
+    element.appendChild(outer);
+  });
+}
+
+enhance("channel-link");
+</script>
+</body>
+
+</html>
