@@ -1,63 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emma Troni</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;1,100&display=swap" rel="stylesheet">
 
-</head>
 
+/head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <a href="/index.html"><img src="immagini/Firma.svg" class="logo"> </a>
-                
-                <ul class="navItems" id="sidemenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/projects.html">Projects</a></li>
-                    <li><a href="/photos.html">Photos</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div id="main">
-                <div class="container">
-                    <div class="row">
-                        <div class="index-col-1">
-                            <p>Design student</p>
-                            <h1>Hi! I'm <span>Emma</span><br>from Venice, Italy</h1>
-                            <a href="" class="hero-btn">download CV</a>
-                            <a href="/contact.html" class="hero-btn">contact me</a>
-                        </div>
-                        <div class="index-col-2">
-                            <a title='about me' href="/about.html"><img src="immagini/Profile-2.svg"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div id="text"><div id="text">
+        <div class="line">
+          <p class="word">A</p>
+          <p class="word">Person</p>
         </div>
-    </div>
+      
+        <div class="line">
+          <p class="word">YouTube</p>
+          <p class="word">&</p>
+        </div>
+      
+        <div class="line">
+          <p class="word">CodePendence</p>
+        </div>
+        
+        <div class="line">
+          <a 
+             id="insta-link" 
+             href="https://www.instagram.com/emma_troni/" 
+             target="_blank" 
+             class="word fancy"
+          >
+            @emma_troni
+          </a>
+        </div>
+      </div>
+      
+      <a id="source-link" class="meta-link" href="https://www.nathansmith.design" target="_blank">
+        <i class="fa-solid fa-link"></i>
+        <span>Source</span>
+      </a>
+      <a id="yt-link" class="meta-link" href="https://youtu.be/owpaafxvkjU" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+        <span>4 min tutorial</span>
+      </a>
+      
+<script type="text/javascript">
+  const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-    <!-- javascript-: sidemenu-->
-    <script>
-        var sidemen = document.getElementById('sidemenu');
+const enhance = id => {
+  const element = document.getElementById(id),
+        text = element.innerText.split("");
+  
+  element.innerText = "";
+  
+  text.forEach((value, index) => {
+    const outer = document.createElement("span");
+    
+    outer.className = "outer";
+    
+    const inner = document.createElement("span");
+    
+    inner.className = "inner";
+    
+    inner.style.animationDelay = `${rand(-5000, 0)}ms`;
+    
+    const letter = document.createElement("span");
+    
+    letter.className = "letter";
+    
+    letter.innerText = value;
+    
+    letter.style.animationDelay = `${index * 1000 }ms`;
+    
+    inner.appendChild(letter);    
+    
+    outer.appendChild(inner);    
+    
+    element.appendChild(outer);
+  });
+}
 
-        function openmenu() {
-            sidemen.style.right = '0';
-        }
-        function closemenu() {
-            sidemen.style.right = '-200px';
-        }
-    </script>
-    
-    
+enhance("channel-link");
+</script>
 </body>
 
 </html>

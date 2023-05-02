@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma Troni</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="/index.html"><img src="immagini/Firma.svg" class="logo"> </a>
+                
+                <ul class="navItems" id="sidemenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
+                    <li><a href="/photos.html">Photos</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div id="main">
+                <div class="container">
+                    <div class="row">
+                        <div class="index-col-1">
+                            <p>Design student</p>
+                            <h1>Hi! I'm <span>Emma</span><br>from Venice, Italy</h1>
+                            <a href="" class="hero-btn">download CV</a>
+                            <a href="/contact.html" class="hero-btn">contact me</a>
+                        </div>
+                        <div class="index-col-2">
+                            <a title='about me' href="/about.html"><img src="immagini/Profile-2.svg"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript-: sidemenu-->
+    <script>
+        var sidemen = document.getElementById('sidemenu');
+
+        function openmenu() {
+            sidemen.style.right = '0';
+        }
+        function closemenu() {
+            sidemen.style.right = '-200px';
+        }
+    </script>
+    
+    
+</body>
+
+</html>
