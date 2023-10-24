@@ -1,51 +1,52 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emma Troni</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;1,100&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover</title>
+  <link rel="stylesheet" href="style.css">
 
-
-/head>
+</head>
 <body>
-    <div id="text"><div id="text">
-        <div class="line">
-          <p class="word">Emma</p>
-          <p class="word">Troni</p>
-        </div>
-      
-        <div class="line">
-          <p class="word">Design    </p>
-          <p class="word">&</p>
-        </div>
-      
-        <div class="line">
-          <p class="word">Photography</p>
-        </div>
-        
-        <div class="line">
-          <a 
-             id="insta-link" 
-             href="https://www.instagram.com/emma_troni/" 
-             target="_blank" 
-             class="word fancy"
-          >
-            @emma_troni
-          </a>
-        </div>
-      </div>
-      <a id="source-link" class="meta-link" href="https://emmatroni.myportfolio.com" target="_blank">
-        <i class="fa-solid fa-link"></i>
-        <span>My Portfolio</span>
+  <div id="text"><div id="text">
+    <div class="line">
+      <p class="word">Emma</p>
+      <p class="word">Troni</p>
+    </div>
+  
+    <div class="line">
+      <p class="word">Design</p>
+      <p class="word">&</p>
+    </div>
+  
+    <div class="line">
+      <p class="word">Photography</p>
+    </div>
+    
+    <div class="line">
+      <a 
+         id="channel-link" 
+         href="https://emmatroni.com" 
+         target="_blank" 
+         class="word fancy"
+      >
+        emmatroni.com
       </a>
+    </div>
+  </div>
+  
+  <a id="source-link" class="meta-link" href="https://www.nathansmith.design" target="_blank">
+    <i class="fa-solid fa-link"></i>
+    <span>Source</span>
+  </a>
+  
+  <a id="yt-link" class="meta-link" href="https://github.com/emmatroni/portfolio" target="_blank">
+    <i class="fa-brands fa-youtube"></i>
+    <span>My GitHub</span>
+  </a>
 
-<script type="text/javascript">
-  const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+    <!-- javascript-: sidemenu-->
+    <script>
+    const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const enhance = id => {
   const element = document.getElementById(id),
@@ -80,7 +81,7 @@ const enhance = id => {
   });
 }
 
-</script>
+enhance("channel-link");
+  </script>
 </body>
-
 </html>
